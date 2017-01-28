@@ -206,6 +206,8 @@ a:focus {
 
 #headerwrap {
 	background-color: #00b3fe;
+	/*background-image: url('/assets/img/greenbg.png');
+ background-size: 100% 100%;*/
 	min-height: 550px;
 	padding-top: 100px;
 	padding-bottom: 0px;
@@ -532,7 +534,7 @@ border: 0;
 padding: 0;
 cursor: pointer;
 height: 40px;
-width: 110px;*/
+width: 112px;
 font: bold 15px/40px 'Raleway', sans-serif;
 color: #fff;
 text-transform: uppercase;
@@ -581,4 +583,10 @@ padding: 0;
     color:#333;
     top:6px;
     margin-left: 3px;
+}
+
+.logo {
+    display: inline-block;
+    max-width: 70%;
+	   height: auto;
 }
