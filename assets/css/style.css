@@ -490,9 +490,10 @@ box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 
 }
 .form-wrapper-2 input {
-width: 80%;
+width: 60%;
 height: auto;
 padding: 10px 5px;
+margin-top: 0px; /*Edits*/
 float: center;
 font: bold 15px 'Raleway', sans-serif;
 border: 0;
@@ -526,12 +527,12 @@ font-style: italic;
 .form-wrapper-2 button {
 overflow: visible;
 position: relative;
-float: right;
+float: inherit;  /*Edit from right: */
 border: 0;
 padding: 0;
 cursor: pointer;
 height: 40px;
-width: 110px;
+width: 110px;*/
 font: bold 15px/40px 'Raleway', sans-serif;
 color: #fff;
 text-transform: uppercase;
@@ -567,7 +568,17 @@ border-right-color: #c42f2f;
 border: 0;
 padding: 0;
 }
-
-
-
-
+/*resize search button according to screen size*/
+@media (max-width: 500px) {
+  .search_btn {
+	font-size:12px;
+    padding: 4px 6px;
+      max-width: 55px;
+  }
+}
+.searchGlyph {
+    font-size: 1.2em;
+    color:#333;
+    top:6px;
+    margin-left: 3px;
+}
