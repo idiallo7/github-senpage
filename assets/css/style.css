@@ -590,3 +590,10 @@ padding: 0;
     max-width: 70%;
 	   height: auto;
 }
+
+.logoStyle
+{
+	/*color:#D88F3C;*/
+	font-size: 1.0em;
+	font-weight: bold;
+}
