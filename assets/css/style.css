@@ -464,7 +464,7 @@ csmall2 {
 /* search box */
 
 .button_box2 {
-margin:100px auto;
+margin:50px auto;
 }
 /*-------------------------------------*/
 .cf:before, .cf:after{
@@ -597,3 +597,23 @@ padding: 0;
 	font-size: 1.0em;
 	font-weight: bold;
 }
+
+.btn-hover {
+  color: #fff;
+   background-color: #00b3fe;
+  border-color: #00b3fe;
+  
+  margin: 114px;
+	
+}
+.btn-hover:hover,
+.btn-hover:focus,
+.btn-hover:active,
+.btn-hover.active,
+.open .dropdown-toggle.btn-hover {
+  color: #fff;
+ border-color: #fff;
+}
+
+
+
