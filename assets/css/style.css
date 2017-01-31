@@ -464,7 +464,7 @@ csmall2 {
 /* search box */
 
 .button_box2 {
-margin:50px auto;
+margin:35px auto;
 }
 /*-------------------------------------*/
 .cf:before, .cf:after{
@@ -573,10 +573,16 @@ padding: 0;
 /*resize search button according to screen size*/
 @media (max-width: 500px) {
   .search_btn {
-	font-size:12px;
+	font-size:10px;
     padding: 4px 6px;
-      max-width: 55px;
+      max-width: 65px;
   }
+	h2{
+  font-size:24px;
+}
+	h3{
+  font-size:18px;
+}
 }
 .searchGlyph {
     font-size: 1.2em;
@@ -600,11 +606,10 @@ padding: 0;
 
 .btn-hover {
   color: #fff;
-   background-color: #00b3fe;
-  border-color: #00b3fe;
-  
-  margin: 114px;
-	
+  background-color: #384452;
+  border-color: #384452;
+  margin: 15px;
+	 height: 35px;
 }
 .btn-hover:hover,
 .btn-hover:focus,
@@ -612,8 +617,10 @@ padding: 0;
 .btn-hover.active,
 .open .dropdown-toggle.btn-hover {
   color: #fff;
- border-color: #fff;
+  background-color: #FA8807;
+  border-color: #00b3fe;
 }
+
 
 
 

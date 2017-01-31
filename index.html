@@ -78,35 +78,36 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-					<h2>La page referentielle des entreprises Senegalaises</h2>
-					<h3>SenPage à la une des dernières mis-a-jour des entreprises</h3>
+					<h2>La page referentielle des entreprises senegalaises</h2>
+					<h3>SenPage à la une des dernières mis-a-jour des entreprises senegaleses</h3>
 					<!--h4>RechercheSenPage augmente la visibilité de des entreprises sur l'internet</h4-->
 				</div>
 
 				<div class="col-lg-8 col-lg-offset-2">
-					<div class="centered">
+					<!--div class="centered"-->
 						<div id="sb-search" class="sb-search">
 							<div class="button_box2">
 								<form class="form-wrapper-2 cf">
 									<input type="text" placeholder="Chercher ici..." required />
-									<button type="submit" class="search_btn">Researche</button>
+									<button type="submit" class="search_btn"><span class="search_btn">Chercher</span></button>
 								</form>
 							</div>
 						</div>
-					</div>
+					<!--/div-->
 				</div>
 			</div>
 			<!-- Entreprises -->
 			<div class="row">
 				<!-- row 2-->
 				<div class="col-lg-8 col-lg-offset-2">
-
 					<h2>Entreprises et Entrepreneures</h2>
-					<h3>Enregistez votre entreprise et receivez une page gratuite</h3></br>
+					<h3>Enregistez votre entreprise et receivez une page gratuite</h3>
 					<h4>Augmente la visibilité de votre entreprise sur l'internet<br/> Beneficiez des mises a jour gratuites</h4>
 					<br/>
 					<a href="#comparison" target="_self"><img src="/assets/img/person.png" alt="">
-						<br/>Plus d'info </a>
+						<br/>
+							<a href="#comparison" class="btn btn-hover">Plus d'info</a>
+						
 				</div>
 			</div>
 		</div>
@@ -509,7 +510,7 @@
 
 	<script>
 		// Portfolio
-		(function ($) {
+		(function($) {
 			"use strict";
 			var $container = $('.portfolio'),
 				$items = $container.find('.portfolio-item'),
@@ -532,10 +533,10 @@
 			}, refreshWaypoints());
 
 			function refreshWaypoints() {
-				setTimeout(function () {}, 1000);
+				setTimeout(function() {}, 1000);
 			}
 
-			$('nav.portfolio-filter ul a').on('click', function () {
+			$('nav.portfolio-filter ul a').on('click', function() {
 				var selector = $(this).attr('data-filter');
 				$container.isotope({
 					filter: selector
@@ -568,7 +569,7 @@
 					columnNumber = getColumnNumber(),
 					itemWidth = Math.floor(winWidth / columnNumber);
 
-				$container.find('.portfolio-item').each(function () {
+				$container.find('.portfolio-item').each(function() {
 					$(this).css({
 						width: itemWidth + 'px'
 					});
@@ -580,11 +581,11 @@
 				$container.isotope('reLayout');
 			}
 
-			$container.imagesLoaded(function () {
+			$container.imagesLoaded(function() {
 				setPortfolio();
 			});
 
-			$(window).on('resize', function () {
+			$(window).on('resize', function() {
 				setPortfolio();
 			});
 		})(jQuery);
