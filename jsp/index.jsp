@@ -16,8 +16,7 @@
 
 	<!-- Custom styles for this template -->
 	<link href="assets/css/style.css" rel="stylesheet">
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
-	<link href="assets/css/awesomplete.css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
 
 	<!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -29,9 +28,10 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<!--script src="assets/js/modernizr.js"></script-->
+		<!--script src="assets/js/modernizr.js"></script-->
 	</script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 	 <!--script src="assets/js/awesomplete.js" async></script-->
+	
 </head>
 
 <body>
@@ -47,7 +47,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<li>
-					<a class="navbar-brand" href="index.html">SENPAGE
+					<a class="navbar-brand" href="">SENPAGE
         <span class="glyphicon glyphicon-log-in" id="logIcon"></span>
     </a>
 				</li>
@@ -82,52 +82,37 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					<h2>La page referentielle des entreprises senegalaises</h2>
-					<h3>SenPage à la une des dernières mis-a-jour des entreprises senegaleses</h3>
-					<!--h4>RechercheSenPage augmente la visibilité de des entreprises sur l'internet</h4-->
+					<h3>SenPage &agrave; la une des derni&eacute;res mis-a-jour des entreprises senegaleses</h3>	
 				</div>
+				
+						///// for testing purposes only ///
+						<div id="senpageReportWaiter">res</div>
+						///////////////////////////////////////
 
 				<div class="col-lg-8 col-lg-offset-2">
-					<!--div class="centered"-->
-						<div id="sb-search" class="sb-search">
-							<div class="button_box2">
+					<div id="sb-search" class="sb-search">
+							<div class="button_box2 search-container">
 								<form class="form-wrapper-2 cf">
-									<input type="text" placeholder="Chercher ici..." required />
-									<button type="submit" class="search_btn"><span class="search_btn">Chercher</span></button>
+									<div class="ui-widget">
+									 <input type="text" id="term" name="term" class="search" placeholder="Chercher ici..." required />
+									 <button type="submit" class="search_btn"><span class="search_btn">Chercher</span></button>
+									</div>
 								</form>
 							</div>
 						</div>
-					///////////////
-					<div>
-  <input class="awesomplete" list="mylist" />
-<datalist id="mylist">
-    <option>Ada</option>
-    <option>Java</option>
-    <option>JavaScript</option>
-    <option>Brainfuck</option>
-    <option>LOLCODE</option>
-    <option>Node.js</option>
-    <option>Ruby on Rails</option>
-</datalist>
-  </div>
-					
-					////////////////
-					
-					
-					<!--/div-->
 				</div>
-			</div>
+			</div><!--end row-->
 			<!-- Entreprises -->
 			<div class="row">
 				<!-- row 2-->
 				<div class="col-lg-8 col-lg-offset-2">
 					<h2>Entreprises et Entrepreneures</h2>
 					<h3>Enregistez votre entreprise et receivez une page gratuite</h3>
-					<h4>Augmente la visibilité de votre entreprise sur l'internet<br/> Beneficiez des mises a jour regulieres</h4>
+					<h4>Augmente la visibilit&eacute; de votre entreprise sur l'internet<br/> Beneficiez des mises a jour regulieres</h4>
 					<br/>
-					<a href="#comparison" target="_self"><img src="/assets/img/person.png" alt="">
+					<a href="#comparison" target="_self"><img src="assets/img/person.png" alt="">
 						<br/>
-							<a href="#comparison" class="btn btn-hover">Plus d'info</a>
-						
+							<a href="#comparison" class="btn btn-hover">Plus d'info</a>		
 				</div>
 			</div>
 		</div>
@@ -519,8 +504,16 @@
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/retina-1.1.0.js"></script>
+	<script src="assets/js/senpageAjax.js"></script>	
+	<script src="assets/js/autocompleter.js"></script>	
+	
+	<!--script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script-->	
+		
+		
+	<script src="assets/js/retina.min.js"></script>
 	<script src="assets/js/jquery.hoverdir.js"></script>
 	<script src="assets/js/jquery.hoverex.min.js"></script>
 	<script src="assets/js/jquery.prettyPhoto.js"></script>

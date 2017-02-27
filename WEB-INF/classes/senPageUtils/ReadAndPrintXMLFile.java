@@ -1,0 +1,70 @@
+import java.io.File;
+import org.w3c.dom.Document;
+import org.w3c.dom.*;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
+
+//tsuji:note [a] adding these
+import java.net.URL;
+import java.io.InputStream;
+
+public class ReadAndPrintXMLFile{
+    public static void main (String argv []){
+    try {
+            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+
+            //tsuji:note [b] change this
+            //Document doc = docBuilder.parse (new File("book.xml"));
+            URL url = new URL("http://query.yahooapis.com/v1/public/yql?q=select * from yahoo.finance.xchange where pair in('USDXOF')&env=store://datatables.org/alltableswithkeys");
+            InputStream stream = url.openStream();
+            Document doc = docBuilder.parse(stream);
+
+            // normalize text representation
+            doc.getDocumentElement ().normalize ();
+            System.out.println ("Root element of the doc is " +
+                 doc.getDocumentElement().getNodeName());
+            NodeList listOfPersons = doc.getElementsByTagName("person");
+            int totalPersons = listOfPersons.getLength();
+            System.out.println("Total no of people : " + totalPersons);
+            for(int s=0; s<listOfPersons.getLength() ; s++){
+                Node firstPersonNode = listOfPersons.item(s);
+                if(firstPersonNode.getNodeType() == Node.ELEMENT_NODE){
+                    Element firstPersonElement = (Element)firstPersonNode;
+                    //-------
+                    NodeList firstNameList = firstPersonElement.getElementsByTagName("first");
+                    Element firstNameElement = (Element)firstNameList.item(0);
+                    NodeList textFNList = firstNameElement.getChildNodes();
+                    System.out.println("First Name : " +
+                           ((Node)textFNList.item(0)).getNodeValue().trim());
+                    //-------
+                    NodeList lastNameList = firstPersonElement.getElementsByTagName("last");
+                    Element lastNameElement = (Element)lastNameList.item(0);
+                    NodeList textLNList = lastNameElement.getChildNodes();
+                    System.out.println("Last Name : " +
+                           ((Node)textLNList.item(0)).getNodeValue().trim());
+                    //----
+                    NodeList ageList = firstPersonElement.getElementsByTagName("age");
+                    Element ageElement = (Element)ageList.item(0);
+                    NodeList textAgeList = ageElement.getChildNodes();
+                    System.out.println("Age : " +
+                           ((Node)textAgeList.item(0)).getNodeValue().trim());
+                    //------
+                }//end of if clause
+            }//end of for loop with s var
+        }catch (SAXParseException err) {
+        System.out.println ("** Parsing error" + ", line "
+             + err.getLineNumber () + ", uri " + err.getSystemId ());
+        System.out.println(" " + err.getMessage ());
+        }catch (SAXException e) {
+        Exception x = e.getException ();
+        ((x == null) ? e : x).printStackTrace ();
+        }catch (Throwable t) {
+        t.printStackTrace ();
+        }
+        //System.exit (0);
+    }//end of main
+}

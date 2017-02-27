@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PopConfirm Testing</title>
+
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+
+        <!--script type="text/javascript">
+                $(document).ready(function() {
+                    $('.test-jquery-click').click(function() {
+                        alert('Event 1');
+                    });
+                    $('.test-jquery-click').bind('click', function() {
+                        alert('Event 2');
+                    });
+                });
+         </script-->
+
+
+
+    </head>
+    <body>
+        <div class="container">
+
+          <!--div class="btn btn-success popconfirm test-jquery-click">Test jQuery Click</div-->
+
+
+            <!--h4>Hard Onclick attribute</h4>
+
+            <div class="btn btn-success popconfirm" onclick="alert('Test Onclick !');">Test Onclick Attribute</div-->
+
+            <h4>Href link</h4>
+
+            <a href="http://www.google.com/" class="btn btn-success popconfirm">google</a>
+
+            <!--h4>Form submit test</h4>
+            <form method="POST" action="#">
+                <button type="submit" class="btn btn-success popconfirm">Submit</button>
+            </form-->
+
+            <h4>Test two classes (single instance across several handlers)</h4>
+            <div><a href="#" class="btn btn-success popconfirm1">Class 1</a></div>
+            <!--div><a href="#" class="btn btn-success popconfirm2">Class 2</a></div-->
+        </div>
+
+        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../jquery.popconfirm.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".popconfirm").popConfirm();
+
+                $(".popconfirm1").popConfirm();
+                $(".popconfirm2").popConfirm();
+            });
+        </script>
+    </body>
+</html>
